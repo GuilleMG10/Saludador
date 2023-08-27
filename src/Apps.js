@@ -27,25 +27,43 @@ function get_genero(genero , edad)
     }
   }
 }
- function get_hora()
+ function get_hora_Idioma(idioma)
  {
     let fechaActual = new Date();
     let horaActual = fechaActual.getHours();
-    if(horaActual<12)
+    if(idioma=="Es")
     {
-      return "Buenos Dias";
+      if(horaActual<12)
+      {
+        return "Buenos Dias";
+      }
+      if (horaActual >12 && horaActual <18)
+      {
+        return  "Buenas tardes";
+      }
+      if(horaActual >18 && horaActual <24)
+      {
+        return "Buenas Noches";
+      }
     }
-    if (horaActual >12 && horaActual <18)
-    {
-      return  "Buenas tardes";
+    else{
+      if(horaActual<12)
+      {
+        return "Good Morning";
+      }
+      if (horaActual >12 && horaActual <18)
+      {
+        return  "Good Afternoon";
+      }
+      if(horaActual >18 && horaActual <24)
+      {
+        return "Good Night";
+      }
     }
-    if(horaActual >18 && horaActual <24)
-    {
-      return "Buenas Noches";
-    }
+   
 
 
  }
 
-  export {get_nombre,get_genero,get_hora};
+  export {get_nombre,get_genero,get_hora_Idioma};
   
