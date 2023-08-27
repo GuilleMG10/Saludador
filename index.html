@@ -1,10 +1,15 @@
 <html>
   <body>
-    <h1>INGRESE SU NOMBRE</h1>
+    <h1>INGRESE SU NOMBRE Y GENERO</h1>
     <form id="nombre-form">
       <label for="nombre">Nombre</label>
       <input type="string" id="nombre" />
-      <input type="submit" value="nombre" id="nombre-button" />
+      <label for="genero">Genero</label>
+      <select id="genero" name="genero" required>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+      </select>
+      <input type="submit" value="datos" id="datos-button" />
     </form>
     <div id="resultado-div"></div>
 
