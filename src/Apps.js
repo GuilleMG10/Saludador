@@ -26,7 +26,26 @@ function get_genero(genero , edad)
       return "Joven";
     }
   }
- 
 }
-  export {get_nombre,get_genero};
+ function get_hora()
+ {
+    let fechaActual = new Date();
+    let horaActual = fechaActual.getHours();
+    if(horaActual<12)
+    {
+      return "Buenos Dias";
+    }
+    if (horaActual >12 && horaActual <18)
+    {
+      return  "Buenas tardes";
+    }
+    if(horaActual >18 && horaActual <24)
+    {
+      return "Buenas Noches";
+    }
+
+
+ }
+
+  export {get_nombre,get_genero,get_hora};
   
